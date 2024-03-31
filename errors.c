@@ -12,14 +12,14 @@
  * (7) => When the stack it empty for pop.
  * (8) => When stack is too short for operation.
  */
-void err(int error_code, ...)
+void erro(int eror_cod, ...)
 {
 	va_list ag;
 	char *op;
 	int l_num;
 
-	va_start(ag, error_code);
-	switch (error_code)
+	va_start(ag, eror_cod);
+	switch (eror_cod)
 	{
 		case 1:
 			fprintf(stderr, "USAGE: monty file\n");
@@ -54,13 +54,13 @@ void err(int error_code, ...)
  * (8) => When stack is too short for operation.
  * (9) => Division by zero.
  */
-void more_err(int error_code, ...)
+void more_error(int eror_cod, ...)
 {
 	va_list ag;
 	char *op;
 	int l_num;
 
-	va_start(ag, error_code);
+	va_start(ag, eror_cod);
 	switch (error_code)
 	{
 		case 6:
@@ -93,14 +93,14 @@ void more_err(int error_code, ...)
  * (10) ~> The number inside a node is outside ASCII bounds.
  * (11) ~> The stack is empty.
  */
-void string_err(int error_code, ...)
+void str_erer(int error_cod, ...)
 {
 	va_list ag;
 	int l_num;
 
-	va_start(ag, error_code);
+	va_start(ag, error_cod);
 	l_num = va_arg(ag, int);
-	switch (error_code)
+	switch (error_cod)
 	{
 		case 10:
 			fprintf(stderr, "L%d: can't pchar, value out of range\n", l_num);
